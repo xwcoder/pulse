@@ -1,0 +1,30 @@
+{
+  "name": "pulse",
+  "version": "0.0.1",
+  "description": "pulse\r =====",
+  "main": "pulse.js",
+  "dependencies": {
+    "iconv-lite": "~0.2.11",
+    "iconv" : "~2.0.7",
+    "jschardet" : "~1.1.0",
+    "uglify-js" : "~2.4.13 ",
+    "jshint" : "~2.5.0",
+    "clean-css" : "~2.1.8",
+    "mkdirp" : "~0.4.0",
+    "ftp" : "~0.3.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/xwcoder/pulse.git"
+  },
+  "author": "creep",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xwcoder/pulse/issues"
+  },
+  "homepage": "https://github.com/xwcoder/pulse"
+}
