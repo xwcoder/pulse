@@ -7,7 +7,7 @@ pulse
 
 ### 全局配置 ###
 
-<code>
+<pre>
 
     // 字典文件匹配规则
     mapFiles : [ /(^|\/)kao\./, /(^|\/)dict\./, /(^|\/)inc\./, /(^|\/)gg\.seed\./ ],
@@ -41,13 +41,13 @@ pulse
             
         }
     }
-</code>
+</pre>
 
 全局配置: 详见setting.js
 
 ### 个人配置 ###
 
-<code>
+<pre>
 
     // 作者, 会出现在压缩文件的banner里
     author : 'creep',
@@ -76,14 +76,27 @@ pulse
             password : 'ftp1', //密码
         }
     }
-</code>
+</pre>
 
 个人配置: 详见config.js
 
+## 清单文件 list.txt ##
+
+清单文件是纯文本文件，每个文件名(文件路径)占一行。可通过git命令导出, 如
+<code>git log master.. --name-only --pretty=format:"" | sort -u | uniq > ~/list.txt</code>
+
+<pre>
+
+list.txt:
+
+js/site/pad/inc.js
+js/site/pad/play.js
+js/site/pad/video.js
+</pre>
 
 ## 使用&命令  ##
 
-<code>
+<pre>
 
     cd pulse // pulase根目录
 
@@ -97,4 +110,4 @@ pulse
          -h : help info
          -f : 指定本地配置文件, 默认是pulse.js同目录下的config.js
          -m -p(-mp, -pm) : 压缩并上传(-m和-p的组合)
-</code>
+</pre>
