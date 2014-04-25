@@ -84,7 +84,8 @@ pulse
 
 清单文件是纯文本文件，每个文件名(文件路径)占一行。可通过git命令导出, 如    
 <pre>
-    git log master.. --name-only --pretty=format:"" | sort -u | uniq > ~/list.txt
+    git log master.. --name-only --pretty=format:'' | sort -u > ~/list.txt
+    git log fb05af..HEAD --name-only --pretty=format:'' sort -u > ~/list.txt
 </pre>
 
 <pre>
