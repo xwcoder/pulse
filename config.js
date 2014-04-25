@@ -1,0 +1,29 @@
+var config = {
+    author : 'creep',
+    root : '/home/xwcoder/code/tv',
+
+    build_dir : '/home/xwcoder/code/online/build',
+    logFile : '/home/xwcoder/code/online/log.txt',
+
+    // 待处理文件清单(压缩 hint)
+    listFile : '/home/xwcoder/code/online/list.txt',
+    
+    // 上传文件清单, 可有压缩步骤生成
+    pListFile : '/home/xwcoder/code/online/plist.txt',
+
+    uploader : {
+        ftp : {
+            host : 'localhost', //ftp服务器地址
+            port : 21, //ftp服务端口
+            user : 'ftp1', //用户名
+            password : 'ftp1', //密码
+
+            //host : '10.11.52.183', //ftp服务器地址
+            //port : 21, //ftp服务端口
+            //user : 'xxx', //用户名
+            //password : 'xxx', //密码
+        }
+    }
+};
+
+module.exports = config;
