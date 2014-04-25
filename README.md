@@ -83,15 +83,18 @@ pulse
 ## 清单文件 list.txt ##
 
 清单文件是纯文本文件，每个文件名(文件路径)占一行。可通过git命令导出, 如    
-<pre>git log master.. --name-only --pretty=format:"" | sort -u | uniq > ~/list.txt</pre>
+<pre>
+    git log master.. --name-only --pretty=format:"" | sort -u | uniq > ~/list.txt
+</pre>
 
 <pre>
+    list.txt:
 
-list.txt:
-
-js/site/pad/inc.js
-js/site/pad/play.js
-js/site/pad/video.js
+    css/pad/video.css
+    css/pad/images/bg.png
+    js/site/pad/play.js
+    js/site/pad/inc.js
+    js/site/pad/video.js
 </pre>
 
 ## 使用&命令  ##
