@@ -78,7 +78,7 @@ pulse
     }
 </pre>
 
-个人配置: 详见config.js
+个人配置: 详见config.js.example
 
 ## 清单文件 list.txt ##
 
