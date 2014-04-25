@@ -82,7 +82,7 @@ pulse
 
 ## 清单文件 list.txt ##
 
-清单文件是纯文本文件，每个文件名(文件路径)占一行。可通过git命令导出, 如
+清单文件是纯文本文件，每个文件名(文件路径)占一行。可通过git命令导出, 如    
 <code>git log master.. --name-only --pretty=format:"" | sort -u | uniq > ~/list.txt</code>
 
 <pre>
