@@ -68,6 +68,15 @@ function compressAndUpload () {
     } );
 }
 
+//压缩并上传到测试机 指令: -m -t; -mt; -tm; -t -m
+function compressAndTupload () {
+    compress();
+    
+    compressor.on( 'done', function () {
+        tUpload();
+    } );
+}
+
 //压缩 指令: -m
 function compress () {
 
@@ -121,6 +130,32 @@ function upload () {
     } );
 }
 
+// 上传到测试机 指令: -t 直接copy upload 需优化
+function tUpload () {
+
+    uploader.init( config, setting );
+
+    var pListFile = config.pListFile;
+
+    if ( !pListFile ) {
+        pListFile = path.resolve( path.dirname( config.listFile ), 'plist.txt' );
+    }
+
+    var fileNames = fs.readFileSync( pListFile, { encoding : 'utf-8' } );
+
+    fileNames = fileNames.split( '\n' );
+    fileNames = fileNames.filter( function ( filename ) {
+
+        return filename && filename.trim();
+
+    } );
+    fileNames = appUtil.unique( fileNames );
+
+
+    uploader.tFtpUpload( fileNames );
+
+}
+
 // jshint 指令: -l
 function hint () {
 
@@ -137,7 +172,9 @@ init();
 /**
  * 有限状态机
  *  -m : 压缩
+ *  -t : 上传到测试机
  *  -p : 上传到正式文件服务器
+ *  -m -t : 压缩并上传到测试机
  *  -m -p : 压缩并上传
  *  -l : jshint
  *  -h : help
@@ -146,10 +183,16 @@ if ( commonds[ '-m' ] && commonds[ '-p' ] ) {
 
     compressAndUpload();
 
+} else if ( commonds[ '-m' ] && commonds[ '-t' ] ) {
+
+    compressAndTupload();
+
 } else if ( commonds[ '-p' ] ) {
 
     upload();
 
+} else if ( commonds[ '-t' ] ) {
+    tUpload();
 } else if ( commonds[ '-l' ] ) {
 
     hint();
@@ -165,10 +208,12 @@ if ( commonds[ '-m' ] && commonds[ '-p' ] ) {
     var content = '支持命令：\n' +
          '-m : 压缩\n' +
          '-p : ftp上传到文件服务器\n' +
+         '-t : ftp上传到测试服务器\n' +
          '-l : jshint\n' +
          '-h : help info\n' +
          '-f : 指定配置文件' +
-         '-m -p(-mp, -pm) : 压缩并上传(-m和-p的组合)\n';
+         '-m -p(-mp, -pm) : 压缩并上传(-m和-p的组合)\n' +
+         '-m -t(-mt, -tm) : 压缩并上传到测试机(-m和-t的组合)\n';
 
     console.info( content );
 }

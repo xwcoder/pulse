@@ -18,7 +18,7 @@ var config = {
             user : 'ftp1', //用户名
             password : 'ftp1', //密码
 
-            //host : '10.11.52.183', //ftp服务器地址
+            //host : '', //ftp服务器地址
             //port : 21, //ftp服务端口
             //user : 'xxx', //用户名
             //password : 'xxx', //密码
