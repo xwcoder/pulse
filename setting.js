@@ -19,7 +19,7 @@ var settings = {
         js : {
 
             // 错误阀值, 超过这个阈值jshint不再向下检查，提示错误太多
-            maxerr : 100,
+            maxerr : 2000,
 
             // 如果为真，JSHint会在发现首个错误后停止检查。
             passfail : false,
