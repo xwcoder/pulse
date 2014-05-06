@@ -72,9 +72,18 @@ pulse
         ftp : {
             host : 'localhost', //ftp服务器地址
             port : 21, //ftp服务端口
-            user : 'ftp1', //用户名
-            password : 'ftp1', //密码
-        }
+            user : 'xxx', //用户名
+            password : 'xxx', //密码
+        },
+
+        tFtp : { //测试服务器
+            cwd : '179/',
+            host : '10.11.20.79', //ftp服务器地址
+            port : 21, //ftp服务端口
+            user : 'xxx', //用户名
+            password : 'xxx', //密码
+
+        },
     }
 </pre>
 
@@ -85,7 +94,7 @@ pulse
 清单文件是纯文本文件，每个文件名(文件路径)占一行。可通过git命令导出, 如    
 <pre>
     git log master.. --name-only --pretty=format:'' | sort -u > ~/list.txt
-    git log fb05af..HEAD --name-only --pretty=format:'' sort -u > ~/list.txt
+    git log fb05af..HEAD --name-only --pretty=format:'' | sort -u > ~/list.txt
 </pre>
 
 <pre>
@@ -110,8 +119,10 @@ pulse
         
          -m : 压缩
          -p : ftp上传到文件服务器
+         -t : ftp上传到测试服务器
          -l : jshint
          -h : help info
          -f : 指定本地配置文件, 默认是pulse.js同目录下的config.js
          -m -p(-mp, -pm) : 压缩并上传(-m和-p的组合)
+         -m -t(-mt, -tm) : 压缩并上传(-m和-t的组合)
 </pre>
