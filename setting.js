@@ -10,7 +10,7 @@ var settings = {
     compressor : {
 
         //不做版本号替换
-        excludes : [ /(^|\/)kao\./, /(^|\/)dict\./, /(^|\/)inc\./, /(^|\/)gg\.seed\./ ],
+        excludes : [ /(^|\/)kao\./, /(^|\/)dict\./, /(^|\/)inc\./, /(^|\/)gg\.seed\./, /(^|\/)hdpv\./ ],
     },
 
     hinter : {

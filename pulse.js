@@ -18,7 +18,6 @@ var configFilePath = './config';
 
 args.forEach( function ( arg, index ) {
     if ( arg == '-f' && args[ index + 1 ] ) {
-        console.log( 'xxxx' );
         configFilePath = args[ index + 1 ];
     } else {
         if ( /^-/.test( arg ) ) {
@@ -79,6 +78,8 @@ function compressAndTupload () {
 
 //压缩 指令: -m
 function compress () {
+
+    appUtil.writeFile( config.logFile, '' );
 
     compressor.init( config, setting );
 
@@ -164,7 +165,7 @@ function hint () {
 }
 
 function init () {
-    appUtil.writeFile( config.logFile, '' );
+    //appUtil.writeFile( config.logFile, '' );
 }
 
 init();
