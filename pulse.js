@@ -160,6 +160,8 @@ function tUpload () {
 // jshint 指令: -l
 function hint () {
 
+    appUtil.writeFile( config.logFile, '' );
+
     hinter.init( config, setting );
     hinter.hint( readListFileNames() );
 }
