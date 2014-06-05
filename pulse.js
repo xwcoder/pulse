@@ -54,6 +54,10 @@ function readListFileNames () {
         return filename && filename.trim();
     } );
 
+    fileNames = fileNames.map( function ( filename ) {
+        return filename.trim();
+    } );
+
     return fileNames;
 }
 
