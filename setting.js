@@ -76,7 +76,7 @@ var settings = {
             regexp : false,
             
             // 如果为真，要求所有的非全局变量，在使用前都被声明
-            undef : true,
+            undef : false,
             
             // 如果为真，JSHint会允许各种形式的下标来访问对象
             // 通常只有属性名是关键字才允许下标访问
