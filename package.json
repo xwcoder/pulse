@@ -5,7 +5,6 @@
   "main": "pulse.js",
   "dependencies": {
     "iconv-lite": "~0.2.11",
-    "iconv" : "~2.0.7",
     "jschardet" : "~1.1.0",
     "uglify-js" : "~2.4.13 ",
     "jshint" : "~2.5.0",
