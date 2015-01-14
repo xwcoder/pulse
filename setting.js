@@ -4,7 +4,7 @@
 var settings = {
     
     // 字典文件
-    mapFiles : [ /(^|\/)kao\./, /(^|\/)dict\./, /(^|\/)inc\./, /(^|\/)gg\.seed\./ ],
+    mapFiles : [ /(^|\/)kao\./, /(^|\/)dict\./, /(^|\/)inc\./, /(^|\/)gg\.seed\./, /(^|\/)swfobject\./ ],
 
     // 压缩服务器配置
     compressor : {
